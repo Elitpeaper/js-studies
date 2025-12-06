@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Reduce Görselleştirme</title>
+<style>
+  body { font-family: Arial; padding: 20px; }
+  .step { margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<h2>Reduce Görselleştirme</h2>
+<div id="output"></div>
+
+<script>
+const sayilar = [1, 5, 9, 7];
+
+const output = document.getElementById("output");
+
+let acc = 0; // initialValue
+sayilar.forEach((val, index) => {
+    const yeniAcc = acc + val;
+
+    const div = document.createElement("div");
+    div.className = "step";
+    div.textContent = `Tur ${index + 1}: acc = ${acc}, val = ${val}, acc + val = ${yeniAcc}`;
+    output.appendChild(div);
+
+    acc = yeniAcc;
+});
+
+const finalDiv = document.createElement("div");
+finalDiv.style.fontWeight = "bold";
+finalDiv.textContent = `Sonuç: ${acc}`;
+output.appendChild(finalDiv);
+</script>
+
+</body>
+</html>
