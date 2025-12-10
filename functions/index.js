@@ -162,3 +162,4 @@ const dizikaresi = dizi => {
 }
 
 console.log(dizikaresi(dizi))
+
