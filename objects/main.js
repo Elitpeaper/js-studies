@@ -135,3 +135,13 @@ Object.freeze(person)// person objesini donduruyoruz ve bir daha yeni bir atama 
 Object.isFrozen(person)// obje dondurulmuşsa true değeri döner
 Object.seal(person)// objedeki var olan key lerin value ları değiştirilebilir 
 Object.isSealed(person)// eğer obje değiştirilmişse true değeri döner 
+
+let array = [4,5,7,8,6,78]
+/*function lastelement(arr){
+    let lastelementarr = arr.at(-1)
+    console.log(lastelementarr)
+    return lastelementarr
+}*/
+const lastelement = (arr) => console.log(arr.at(-1))
+
+lastelement(array)
