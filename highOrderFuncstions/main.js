@@ -114,3 +114,27 @@ console.log(names.sort((a,b) => a.localeCompare(b)) // aynı sayılar mantığı
 )
 console.log(names.sort((a,b) => b.localeCompare(a)) // bir üst satırdaki işlemin tersi
 )
+
+function spinWords(sentence){
+
+  return sentence.split(" ").map(word => word.length >= 5 ? word.split("").reverse().join("") : word).join(" ")
+}
+
+
+console.log(spinWords("welcome"))
+
+function areYouPlayingBanjo(name) {
+  // Implement me
+  let message;
+  return name.toLowerCase().startsWith("r") ? message = `${name} plays banjo` : `${name} does not play banjo`
+}
+
+console.log(areYouPlayingBanjo('ronaldo'))
+
+let arr2 = [0,1,2,3,4,5]
+function invert(array) {
+  return array.map(num => num == 0 ? num : num * (-1))
+}
+
+console.log(invert(arr2))
+
