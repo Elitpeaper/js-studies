@@ -118,3 +118,17 @@ console.log(s1.getPersonInfo())
 console.log(s2)
 console.log(s2.getPersonInfo())
 console.log(s2.getFullName())
+
+
+class asd{
+    constructor(ages =[31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]){
+        this.ages = ages
+    }
+    getSum(){
+        const sum = this.ages.reduce((partialSum, a) => partialSum + a, 0)
+        return sum
+    }
+}
+
+const obj = new asd()
+console.log(obj.getSum())
